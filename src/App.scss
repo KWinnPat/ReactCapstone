@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+
+$font-fam: "Abhaya Libre", serif;
+$primary-color: #7d4f50;
+$secondary-color: #cc8b86;
+$accent-color: #d1be9c;
+$background-color: #f9eae1;
+$quilt: linear-gradient(rgba(125, 79, 80, 0.75), rgba(125, 79, 80, 0.75)),
+  url("../assets/quilt-stitch.png");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-fam;
+}
+
+body {
+  background-color: $background-color;
+  color: $primary-color;
+}

@@ -1,12 +1,15 @@
 import Navbar from "./navigation/Navbar";
-import ShowCart from "./Cart";
+import CartModal from "./CartModal";
+import "../styles/Header.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
     <header>
-      <h1>Header</h1>
+      <FontAwesomeIcon icon={faHeart} />
       <Navbar />
-      <ShowCart />
+      <CartModal />
     </header>
   );
 };

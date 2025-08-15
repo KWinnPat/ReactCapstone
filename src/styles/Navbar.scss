@@ -1,0 +1,29 @@
+@import "../App";
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+li > a {
+  color: $background-color;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  font-size: 2.5rem;
+
+  img {
+    width: 25vw;
+    height: auto;
+    position: relative;
+    bottom: -20px;
+  }
+}
+
+li > a:hover {
+  color: $secondary-color;
+}

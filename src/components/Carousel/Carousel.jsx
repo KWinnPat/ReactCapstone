@@ -3,7 +3,9 @@ import { PrevButton, NextButton, usePrevNextButtons } from "./CarouselArrows";
 import useEmblaCarousel from "embla-carousel-react";
 import ProductCard from "../ProductCard";
 
-const EmblaCarousel = (props) => {
+import { useFilterSortProducts } from "../../hooks/filterSortProducts";
+
+const EmblaCarousel = (filter, props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const {
@@ -12,19 +14,19 @@ const EmblaCarousel = (props) => {
     onPrevButtonClick,
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
+  const { filteredSortedProducts } = useFilterSortProducts(filter.filter);
 
   return (
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {/* {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+          {Object.entries(filteredSortedProducts).map(([key, value]) => (
+            <div className="embla__slide" key={key}>
+              <div className="embla__slide__number">
+                <ProductCard product={value} />
+              </div>
             </div>
-          ))} */}
-          <p>slides</p>
-
-          <ProductCard />
+          ))}
         </div>
       </div>
 

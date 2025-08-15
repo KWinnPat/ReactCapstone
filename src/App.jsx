@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import Header from "./components/Header";
@@ -10,10 +10,9 @@ import Checkout from "./pages/Checkout";
 import Item from "./pages/Item";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <Router>
       <div className="App">

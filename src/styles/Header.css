@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Abhaya Libre", serif;
+}
+
+body {
+  background-color: #f9eae1;
+  color: #7d4f50;
+}
+
+header {
+  background-color: #7d4f50;
+  color: #f9eae1;
+  background-image: linear-gradient(rgba(125, 79, 80, 0.75), rgba(125, 79, 80, 0.75)), url("../assets/quilt-stitch.png");
+  padding: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+header > * {
+  width: 15%;
+}
+header *:nth-child(2) {
+  width: 70%;
+}/*# sourceMappingURL=Header.css.map */

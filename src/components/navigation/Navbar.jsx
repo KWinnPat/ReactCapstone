@@ -1,6 +1,7 @@
 import RouteController from "./RouteController";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Logo.png";
+import "../../styles/Navbar.css";
 
 const Navbar = () => {
   return (

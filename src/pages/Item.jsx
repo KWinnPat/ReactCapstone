@@ -1,11 +1,14 @@
+import { use } from "react";
 import EmblaCarousel from "../components/Carousel/Carousel";
-import { addToCart } from "../components/Cart";
+import AddToCartButton from "../components/AddToCartButton";
 
 const Item = () => {
-  const handleAddToCart = () => {
-    addToCart(product);
+  const product = {
+    id: 1,
+    title: "Sample Item",
+    image: "item.jpg",
+    price: 29.99,
   };
-
   return (
     <div>
       <h1>Item Page</h1>
@@ -14,7 +17,7 @@ const Item = () => {
         <EmblaCarousel />
       </div>
       <div className="info">
-        <button onClick={handleAddToCart}>Add to Cart</button>
+        <AddToCartButton product={product} />
       </div>
       <div className="suggestions">
         <EmblaCarousel />

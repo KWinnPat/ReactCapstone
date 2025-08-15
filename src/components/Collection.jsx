@@ -1,10 +1,10 @@
 import Carousel from "./Carousel/Carousel";
-const Collection = () => {
+const Collection = (filter) => {
+  const title = filter.filter;
   return (
     <div>
-      <h1>Collection</h1>
-      <p>Filter: 1</p>
-      <Carousel />
+      <h1>{title}</h1>
+      <Carousel filter={title} />
     </div>
   );
 };
