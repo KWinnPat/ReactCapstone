@@ -7,9 +7,13 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   return (
     <header>
-      <FontAwesomeIcon icon={faHeart} />
-      <Navbar />
-      <CartModal />
+      <div className="header">
+        <button className="heart-button">
+          <FontAwesomeIcon icon={faHeart} />{" "}
+        </button>
+        <Navbar />
+        <CartModal />
+      </div>
     </header>
   );
 };

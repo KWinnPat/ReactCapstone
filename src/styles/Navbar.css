@@ -16,8 +16,9 @@ ul {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: baseline;
+  min-width: 55vw;
 }
 
 li > a {
@@ -25,15 +26,22 @@ li > a {
   text-decoration: none;
   font-weight: 400;
   transition: color 0.3s ease;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 li > a img {
-  width: 25vw;
+  width: 15vw;
   height: auto;
   position: relative;
-  bottom: -20px;
+  bottom: -15px;
 }
 
 li > a:hover {
   color: #cc8b86;
+}
+
+button {
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0);
+  transition: color 0.3s ease;
+  border: 0;
 }/*# sourceMappingURL=Navbar.css.map */

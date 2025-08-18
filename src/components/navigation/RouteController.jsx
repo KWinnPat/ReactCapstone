@@ -1,9 +1,5 @@
 const RouteController = () => {
-  return (
-    <div>
-      <h1>Route Controller</h1>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default RouteController;

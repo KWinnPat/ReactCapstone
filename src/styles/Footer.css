@@ -11,25 +11,29 @@ body {
   color: #7d4f50;
 }
 
-header {
+footer {
   width: 100vw;
-  height: 120px;
+  height: 200px;
   background-color: #7d4f50;
   color: #f9eae1;
   background-image: linear-gradient(rgba(125, 79, 80, 0.75), rgba(125, 79, 80, 0.75)), url("../assets/quilt-stitch.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: fixed;
-  z-index: 3;
 }
-header div {
-  display: flex;
-  height: 80px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+
+.footer-links {
+  display: inline-block;
+  margin-left: 50%;
 }
-header div > * {
-  color: #f9eae1;
-}/*# sourceMappingURL=Header.css.map */
+.footer-links ul {
+  display: list-item;
+}
+.footer-links li > a {
+  color: #cc8b86;
+  font-size: 1.5rem;
+}
+
+h1 {
+  margin: 20px 0;
+}/*# sourceMappingURL=Footer.css.map */

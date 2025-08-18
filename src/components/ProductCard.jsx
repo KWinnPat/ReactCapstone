@@ -1,12 +1,19 @@
 import AddToCartButton from "./AddToCartButton";
+import "../styles/ProductCard.css";
 
 const ProductCard = ({ product }) => {
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.name} />
-      <h3>{product.title}</h3>
-      <AddToCartButton product={product} />
-      <p>${product.price.toFixed(2)}</p>
+      <div className="product-image">
+        <img src={product.image} alt={product.name} />
+      </div>
+      <div className="product-info">
+        <h3>{product.title}</h3>
+        <div className="cart-price">
+          <AddToCartButton product={product} />
+          <p>${product.price.toFixed(2)}</p>
+        </div>
+      </div>
     </div>
   );
 };

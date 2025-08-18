@@ -1,5 +1,6 @@
 import { useCart } from "../hooks/useCart";
 import CartModal from "./CartModal";
+import "../styles/AddToCart.css";
 
 function AddToCartButton({ product }) {
   const { handleCartVisibility } = CartModal();
