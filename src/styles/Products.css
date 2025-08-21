@@ -1,4 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Abhaya Libre", serif;
+}
+
+body {
+  background-color: #f9eae1;
+  color: #7d4f50;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main > div {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
 .products-page {
   width: 100%;
   margin-top: 120px;
+  display: flex;
+  background-color: rgba(204, 139, 134, 0.2);
+}
+
+.sort-filter {
+  background-color: rgba(204, 139, 134, 0.6);
+  width: 13vw;
+  padding: 0 1%;
+}
+.sort-filter h2 {
+  font-size: 28px;
+  text-decoration: underline;
+  margin: 9% 0;
+  width: auto;
+}
+
+.products {
+  width: 86vw;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  transform-origin: left top;
+  transform: scale(0.7);
+  width: 123vw;
+}
+.cards > .product-card {
+  margin: 10px;
+}
+
+select {
+  background-color: #f9eae1;
+  border: 2px solid #cc8b86;
+  color: #cc8b86;
+  font-weight: 900;
+  border-radius: 20px;
+  padding: 2%;
+  width: 100%;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.sort-controls > div {
+  margin: 10% 0;
 }/*# sourceMappingURL=Products.css.map */

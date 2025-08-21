@@ -1,4 +1,50 @@
+@import "../App";
 .products-page {
   width: 100%;
   margin-top: 120px;
+  display: flex;
+  background-color: rgba($secondary-color, 0.2);
+}
+.sort-filter {
+  background-color: rgba($secondary-color, 0.6);
+  width: 13vw;
+  padding: 0 1%;
+  h2 {
+    font-size: 28px;
+    text-decoration: underline;
+    margin: 9% 0;
+    width: auto;
+  }
+}
+.products {
+  width: 86vw;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  transform-origin: left top;
+  transform: scale(0.7);
+  width: 123vw;
+  > .product-card {
+    margin: 10px;
+  }
+}
+
+select {
+  background-color: $background-color;
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+  font-weight: 900;
+  border-radius: 20px;
+  padding: 2%;
+  width: 100%;
+}
+
+label {
+  font-size: 20px;
+  font-weight: 900;
+}
+.sort-controls > div {
+  margin: 10% 0;
 }

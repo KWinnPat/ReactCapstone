@@ -11,3 +11,14 @@
     color: $primary-color;
   }
 }
+
+@media screen and (max-width: 1019px) {
+  .collection {
+    width: 95vw;
+    h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      padding-top: 10px;
+    }
+  }
+}

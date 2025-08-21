@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Abhaya Libre", serif;
+}
+
+body {
+  background-color: #f9eae1;
+  color: #7d4f50;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main > div {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.quantity-controller {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  height: auto;
+}
+
+.quantity-btn {
+  width: 20px;
+  height: 30px;
+  border: none;
+  background: rgba(204, 139, 134, 0.3);
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.quantity-btn--increment {
+  border-radius: 0 5px 5px 0;
+}
+.quantity-btn--decrement {
+  border-radius: 5px 0 0 5px;
+}
+
+.quantity-btn:hover:not(:disabled) {
+  background: #e8e8e8;
+}
+
+.quantity-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-input {
+  width: 25px;
+  height: 20px;
+  border: none;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-radius: 0;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+}
+
+.quantity-input:focus {
+  background-color: #f0f8ff;
+}/*# sourceMappingURL=QuantityController.css.map */

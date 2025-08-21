@@ -1,4 +1,10 @@
 .hero-image > img {
-  width: 100%;
-  margin-top: 120px;
+  width: 100vw;
+  margin-top: 17vh;
+}
+
+@media screen and (max-width: 1019px) {
+  .hero-image > img {
+    margin-top: 10vh;
+  }
 }

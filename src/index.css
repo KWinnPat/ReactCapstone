@@ -4,3 +4,9 @@ body {
   height: 100vh;
   overflow-x: hidden;
 }
+#root,
+.App,
+main {
+  position: absolute;
+  top: 0px;
+}

@@ -72,3 +72,26 @@
   width: 35%;
   height: 35%;
 }
+
+@media screen and (max-width: 1019px) {
+  .embla {
+    height: 200px;
+    .embla__viewport {
+      margin: 10px;
+      width: 90vw;
+      height: 100%;
+      .embla__slide {
+        transform-origin: top center;
+        transform: scale(0.3);
+      }
+    }
+  }
+  .embla__buttons {
+    position: relative;
+    top: -275px;
+  }
+  .embla__button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

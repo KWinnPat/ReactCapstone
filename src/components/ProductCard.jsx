@@ -1,9 +1,9 @@
 import AddToCartButton from "./AddToCartButton";
 import "../styles/ProductCard.css";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product }, key) => {
   return (
-    <div className="product-card">
+    <div className="product-card" key={key}>
       <div className="product-image">
         <img src={product.image} alt={product.name} />
       </div>

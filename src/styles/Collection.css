@@ -11,6 +11,19 @@ body {
   color: #7d4f50;
 }
 
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main > div {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
 .collection {
   background-color: rgba(204, 139, 134, 0.4);
   margin: 10px 0;
@@ -22,4 +35,15 @@ body {
   margin: 0;
   padding: 0 10px;
   color: #7d4f50;
+}
+
+@media screen and (max-width: 1019px) {
+  .collection {
+    width: 95vw;
+  }
+  .collection h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 10px;
+  }
 }/*# sourceMappingURL=Collection.css.map */

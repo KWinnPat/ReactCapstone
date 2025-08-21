@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Abhaya Libre", serif;
+}
+
+body {
+  background-color: #f9eae1;
+  color: #7d4f50;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main > div {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.behind-modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 4;
+  width: 100vw;
+  height: 100vh;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  justify-content: end;
+  padding: 0;
+}
+.behind-modal .cart-modal {
+  background-color: #fff;
+  height: 100vh;
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+}
+.behind-modal .cart-modal .cart-items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  align-items: baseline;
+  justify-content: left;
+}
+.behind-modal .cart-modal .cart-items .item {
+  align-items: center;
+  justify-content: left;
+  width: 95%;
+  padding: 0;
+  border-top: 1px solid #7d4f50;
+}
+.behind-modal .cart-modal .cart-items .item > p {
+  color: #7d4f50;
+  width: 13%;
+  text-align: right;
+}
+.behind-modal .cart-modal button,
+.behind-modal .cart-modal h2,
+.behind-modal .cart-modal input {
+  color: #7d4f50;
+  font-size: 1rem;
+}
+.behind-modal .cart-modal p {
+  color: #cc8b86;
+}
+
+h2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 65%;
+}
+
+.price-info {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 5px;
+}
+.price-info > * {
+  margin: 0;
+}
+
+.cart-modal .cart-header {
+  padding: 0;
+  height: auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+.cart-modal .cart-header h1 {
+  margin: 0;
+  color: #7d4f50;
+}
+.cart-modal .cart-header h2 {
+  margin: 0;
+  color: #cc8b86;
+  width: auto;
+  padding-right: 20px;
+}
+
+.cart-footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #7d4f50;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.cart-footer .total {
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+  height: auto;
+}
+.cart-footer .total h1 {
+  color: #7d4f50;
+  margin: 0;
+}
+.cart-footer .checkout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cart-footer .checkout > button {
+  margin: 0;
+  padding: 1% 40%;
+  background-color: #cc8b86;
+  border-radius: 10px;
+  color: #f9eae1;
+}
+
+@media screen and (max-width: 1019px) {
+  .behind-modal .cart-modal {
+    background-color: #fff;
+    width: 100vw;
+  }
+  .behind-modal .cart-modal .cart-items .item > button,
+  .behind-modal .cart-modal .cart-header button {
+    background-color: transparent;
+    width: auto;
+    padding: 0;
+  }
+  .behind-modal .cart-modal .cart-header button {
+    padding: 5vw;
+  }
+}/*# sourceMappingURL=CartModal.css.map */
