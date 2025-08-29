@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Checkout from "./pages/Checkout";
-import Item from "./pages/Item";
-import Products from "./pages/Products";
-import Contact from "./pages/Contact";
-import "./App.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
+import initIcons from "./assets/icons";
+import Header from "./components/navigation/Header";
+import Footer from "./components/navigation/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Item from "./components/pages/Item";
+import Products from "./components/pages/Products";
+import Contact from "./components/pages/Contact";
+import "./styles/main.scss";
+
+initIcons();
 
 function App() {
   return (
@@ -18,14 +21,23 @@ function App() {
       <div className="App">
         <main>
           <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/item" element={<Item />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/item/:id">
+              <Item />
+            </Route>
+            <Route path="/products">
+              <Products />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+          </Switch>
           <Footer />
         </main>
       </div>

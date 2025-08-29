@@ -1,5 +1,4 @@
 import Carousel from "./Carousel/Carousel";
-import "../styles/Collection.css";
 const Collection = (filter) => {
   const title = filter.filter;
   return (

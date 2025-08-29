@@ -1,4 +1,4 @@
-import { useAppInfo } from "./useAppInfo";
+import { useAppInfo } from "../../context/AppContext";
 
 function useCart() {
   const { cart, setCart } = useAppInfo();

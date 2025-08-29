@@ -3,7 +3,7 @@ import { PrevButton, NextButton, usePrevNextButtons } from "./CarouselArrows";
 import useEmblaCarousel from "embla-carousel-react";
 import ProductCard from "../ProductCard";
 
-import { useFilterSortProducts } from "../../hooks/filterSortProducts";
+import { useFilterSortProducts } from "../../helpers/hooks/filterSortProducts";
 
 const EmblaCarousel = (filter, props) => {
   const { slides, options } = props;

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useCart } from "../hooks/useCart.jsx";
-import "../styles/QuantityController.css";
+import { useCart } from "../helpers/hooks/useCart.jsx";
 
 const QuantityController = ({
   itemId,
@@ -38,7 +37,6 @@ const QuantityController = ({
   const handleInputChange = (e) => {
     const value = e.target.value;
 
-    // Allow empty input for better UX
     if (value === "") {
       setQuantity("");
       return;

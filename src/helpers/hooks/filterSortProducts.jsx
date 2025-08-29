@@ -1,4 +1,4 @@
-import { useAppInfo } from "./useAppInfo";
+import { useAppInfo } from "../../context/AppContext";
 import { useState, useEffect, useMemo } from "react";
 
 export function useFilterSortProducts(

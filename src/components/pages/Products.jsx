@@ -1,8 +1,6 @@
-import { use } from "react";
-import ProductCard from "../components/ProductCard";
-import { useFilterSortProducts } from "../hooks/filterSortProducts";
+import ProductCard from "../ProductCard";
+import { useFilterSortProducts } from "../../helpers/hooks/filterSortProducts";
 import { useState, useEffect } from "react";
-import "../styles/Products.css";
 
 const Products = () => {
   const [filter, setFilter] = useState(""); // Assuming 'all' is the default filter

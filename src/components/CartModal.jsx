@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
-import { useAppInfo } from "../hooks/useAppInfo";
-import { useCart } from "../hooks/useCart";
+import { useAppInfo } from "../context/AppContext";
+import { useCart } from "../helpers/hooks/useCart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCartShopping,
-  faTrash,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
-import "../styles/CartModal.css";
 import QuantityController from "./QuantityController";
 
 function CartModal() {
@@ -36,7 +30,7 @@ function CartModal() {
           handleCartVisibility();
         }}
       >
-        <FontAwesomeIcon icon={faCartShopping} />
+        <FontAwesomeIcon icon={["fas", "cart-shopping"]} />
       </button>
       {cartVisibility ? (
         <div className="behind-modal">
@@ -47,7 +41,7 @@ function CartModal() {
                   handleCartVisibility();
                 }}
               >
-                <FontAwesomeIcon icon={faXmark} />
+                <FontAwesomeIcon icon={["fas", "xmark"]} />
               </button>
               <h1>Cart</h1>
               <h2>SubTotal</h2>
@@ -61,7 +55,7 @@ function CartModal() {
                       console.log(cart);
                     }}
                   >
-                    <FontAwesomeIcon icon={faTrash} />
+                    <FontAwesomeIcon icon={["fas", "trash"]} />
                   </button>
                   <h2>{value.title}</h2>
                   <div className="price-info">

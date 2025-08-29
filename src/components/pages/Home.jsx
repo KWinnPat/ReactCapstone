@@ -1,8 +1,7 @@
-import Collection from "../components/Collection";
+import Collection from "../Collection";
 import { useEffect } from "react";
-import { useAppInfo } from "../hooks/useAppInfo";
-import "../styles/embla.css";
-import "../styles/Home.css";
+import { useAppInfo } from "../../context/AppContext";
+
 const Home = () => {
   const { products } = useAppInfo();
 

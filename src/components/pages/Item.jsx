@@ -1,6 +1,6 @@
 import { use } from "react";
-import EmblaCarousel from "../components/Carousel/Carousel";
-import AddToCartButton from "../components/AddToCartButton";
+import EmblaCarousel from "../Carousel/Carousel";
+import AddToCartButton from "../AddToCartButton";
 
 const Item = () => {
   const product = {

@@ -1,5 +1,4 @@
 import AddToCartButton from "./AddToCartButton";
-import "../styles/ProductCard.css";
 
 const ProductCard = ({ product }, key) => {
   return (
