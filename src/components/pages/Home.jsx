@@ -14,6 +14,9 @@ const Home = () => {
         />
       </div>
       <Collection filter="men's clothing" />
+      <div className="background-img">
+        <h1>L'Élégance Naturelle.</h1>
+      </div>
       <Collection filter="women's clothing" />
     </div>
   );

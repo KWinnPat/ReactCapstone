@@ -9,6 +9,7 @@ function CartModal() {
   const { cart, setCart } = useAppInfo();
   const [cartVisibility, setCartVisibility] = useState(false);
   const [total, setTotal] = useState(0);
+  const [inCartQuantity, setInCartQuantity] = useState(0);
   const handleCartVisibility = () => {
     setCartVisibility(!cartVisibility);
   };
@@ -19,8 +20,16 @@ function CartModal() {
     });
     setTotal(total.toFixed(2));
   };
+  const handleQuantity = () => {
+    let totalQuantity = 0;
+    cart.forEach((obj) => {
+      totalQuantity += obj.quantity;
+    });
+    setInCartQuantity(totalQuantity);
+  };
   useEffect(() => {
     handleTotal(cart);
+    handleQuantity();
   }, [cart]);
 
   return (
@@ -31,6 +40,7 @@ function CartModal() {
         }}
       >
         <FontAwesomeIcon icon={["fas", "cart-shopping"]} />
+        <div className="in-cart-quantity">{inCartQuantity}</div>
       </button>
       {cartVisibility ? (
         <div className="behind-modal">

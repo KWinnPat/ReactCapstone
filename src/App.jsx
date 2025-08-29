@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;

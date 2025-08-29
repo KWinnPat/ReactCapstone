@@ -39,6 +39,9 @@ const Footer = () => {
           </ul>
         </nav>
       </div>
+      <div className="copyright">
+        <h5>© 2025 Kai Winn - All Rights Reserved</h5>
+      </div>
     </footer>
   );
 };

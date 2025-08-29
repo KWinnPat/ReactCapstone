@@ -27,7 +27,6 @@ export function useFilterSortProducts(
     }
 
     const toSort = result ? Object.values(result) : [];
-    "Products after filtering:", toSort;
 
     toSort.sort((a, b) => {
       const aVal = a[sortCategory];
