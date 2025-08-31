@@ -4,7 +4,6 @@ function useCart() {
   const { cart, setCart } = useAppInfo();
 
   const addToCart = (product, quantity = 1) => {
-    "Adding to cart:", product, "Quantity:", quantity;
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id);
 
@@ -34,6 +33,7 @@ function useCart() {
   };
 
   const updateQuantity = (productId, newQuantity) => {
+    console.log("updated");
     setCart((prevCart) =>
       prevCart.map((item) =>
         item.id === productId ? { ...item, quantity: newQuantity } : item

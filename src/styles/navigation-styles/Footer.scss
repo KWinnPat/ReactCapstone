@@ -1,0 +1,91 @@
+footer {
+  background-color: $primary-color;
+  background-image: $quilt;
+  color: $background-color;
+
+  .logo {
+    height: 100px;
+  }
+  .footer-info {
+    display: flex;
+    > * {
+      width: 46%;
+      padding: 0 2%;
+      margin: 2% 0;
+      .slogan {
+        margin: 0;
+        text-align: right;
+      }
+    }
+    .business-info {
+      border-right: 1px solid $secondary-color;
+    }
+    .footer-links {
+      border-left: 1px solid $secondary-color;
+      h1 {
+        margin: 1.5rem 0 0 0;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        > li a {
+          color: $background-color;
+          text-decoration: none;
+          font-size: 1.4rem;
+        }
+        a:hover {
+          color: $secondary-color;
+          transition: color 0.5s;
+        }
+        a:active {
+          color: rgba($secondary-color, 0.2);
+          transition: color 0.1s;
+        }
+      }
+    }
+    .contact-info {
+      margin: 5%;
+      * {
+        margin: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.copyright {
+  background-color: $secondary-color;
+  padding: 1% 0;
+  h5 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 430px) {
+  footer .footer-info {
+    flex-direction: column;
+    > * {
+      width: 96%;
+      padding: 2% 0;
+      margin: 0 2%;
+    }
+    .business-info {
+      border-bottom: 1px solid $secondary-color;
+      border-right: none;
+    }
+    .footer-links {
+      border-top: 1px solid $secondary-color;
+      border-left: none;
+      text-align: center;
+      h1 {
+        margin: 0;
+      }
+      ul {
+        padding: 0;
+      }
+    }
+  }
+}

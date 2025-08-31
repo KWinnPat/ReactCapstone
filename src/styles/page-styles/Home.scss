@@ -1,0 +1,24 @@
+.hero-image {
+  width: 100%;
+  height: auto;
+  img {
+    width: 100%;
+  }
+}
+.background-img {
+  background-image: linear-gradient(
+      rgba($background-color, 0.5),
+      rgba($background-color, 0.5)
+    ),
+    url("../assets/New\ Project\(2\).png");
+  background-size: cover;
+  width: 100vw;
+  height: 41vw;
+  h1 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-size: 5vw;
+    font-style: italic;
+  }
+}

@@ -7,6 +7,7 @@ export const AppContext = createContext();
 export function AppProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     if (products.length > 0) return;
     fetch("https://fakestoreapi.com/products")
@@ -14,7 +15,10 @@ export function AppProvider({ children }) {
       .then((data) => {
         setProducts(data);
       })
-      .catch((error) => console.error("Error fetching products:", error));
+      .catch((error) => console.error("Error fetching products:", error))
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -27,7 +31,9 @@ export function AppProvider({ children }) {
   }, [cart]);
 
   return (
-    <AppContext.Provider value={{ cart, setCart, products, setProducts }}>
+    <AppContext.Provider
+      value={{ cart, setCart, products, setProducts, loading }}
+    >
       {children}
     </AppContext.Provider>
   );

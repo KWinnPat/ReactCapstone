@@ -33,8 +33,9 @@ function CartModal() {
   }, [cart]);
 
   return (
-    <div>
+    <div className="cart-modal">
       <button
+        className="cart-button"
         onClick={() => {
           handleCartVisibility();
         }}
@@ -44,7 +45,7 @@ function CartModal() {
       </button>
       {cartVisibility ? (
         <div className="behind-modal">
-          <div className="cart-modal">
+          <div className="cart">
             <div className="cart-header">
               <button
                 onClick={() => {
@@ -69,8 +70,9 @@ function CartModal() {
                   </button>
                   <h2>{value.title}</h2>
                   <div className="price-info">
-                    <p>${value.price}</p>
+                    <p>${value.price.toFixed(2)}</p>
                     <QuantityController
+                      mode="cart"
                       itemId={value.id}
                       initialQuantity={value.quantity}
                     />

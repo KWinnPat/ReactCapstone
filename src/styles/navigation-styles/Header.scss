@@ -4,6 +4,10 @@ header {
   height: 17vh;
   min-height: 120px;
   width: 100vw;
+  position: sticky;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
   .header {
     width: 100%;
     display: flex;

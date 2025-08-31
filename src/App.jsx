@@ -12,10 +12,17 @@ import Item from "./components/pages/Item";
 import Products from "./components/pages/Products";
 import Contact from "./components/pages/Contact";
 import "./styles/main.scss";
+import { useAppInfo } from "./context/AppContext";
 
 initIcons();
 
 function App() {
+  const { loading } = useAppInfo();
+
+  if (loading) {
+    return <div className="loading">Loading products...</div>;
+  }
+
   return (
     <Router>
       <div className="App">

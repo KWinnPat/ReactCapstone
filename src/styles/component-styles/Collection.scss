@@ -1,0 +1,17 @@
+.collection {
+  background-color: rgba($secondary-color, 0.5);
+  margin: 5vh 0;
+
+  h1 {
+    padding: 2% 3% 2% 3%;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .collection h1 {
+    text-align: center;
+  }
+}

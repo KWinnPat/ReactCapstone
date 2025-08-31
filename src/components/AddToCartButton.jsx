@@ -1,14 +1,13 @@
 import { useCart } from "../helpers/hooks/useCart";
 import CartModal from "./CartModal";
 
-function AddToCartButton({ product }) {
-  const { handleCartVisibility } = CartModal();
+function AddToCartButton({ product, quantity }) {
   const { addToCart } = useCart();
 
   return (
     <button
       onClick={() => {
-        addToCart(product);
+        addToCart(product, quantity);
       }}
       className="add-to-cart-btn"
     >
