@@ -11,16 +11,21 @@ import About from "./components/pages/About";
 import Item from "./components/pages/Item";
 import Products from "./components/pages/Products";
 import Contact from "./components/pages/Contact";
+import Loading from "./components/Loading";
+import NotFound from "./components/pages/404";
 import "./styles/main.scss";
 import { useAppInfo } from "./context/AppContext";
-
 initIcons();
 
 function App() {
   const { loading } = useAppInfo();
 
   if (loading) {
-    return <div className="loading">Loading products...</div>;
+    return (
+      <div className="loading">
+        <Loading />
+      </div>
+    );
   }
 
   return (
@@ -43,6 +48,9 @@ function App() {
             </Route>
             <Route path="/contact">
               <Contact />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
           <Footer />

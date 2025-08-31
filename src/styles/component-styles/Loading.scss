@@ -1,0 +1,44 @@
+.loading {
+  width: 100vw;
+  height: 100vh;
+  font-size: 10rem;
+  color: $secondary-color;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  31% {
+    transform: rotate(-38deg);
+  }
+  33% {
+    transform: rotate(-45deg);
+  }
+  35% {
+    transform: rotate(-38deg);
+  }
+  65% {
+    transform: rotate(398deg);
+  }
+  67% {
+    transform: rotate(405deg);
+  }
+  69% {
+    transform: rotate(398deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
