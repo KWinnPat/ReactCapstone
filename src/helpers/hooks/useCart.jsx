@@ -33,7 +33,6 @@ function useCart() {
   };
 
   const updateQuantity = (productId, newQuantity) => {
-    console.log("updated");
     setCart((prevCart) =>
       prevCart.map((item) =>
         item.id === productId ? { ...item, quantity: newQuantity } : item

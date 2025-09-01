@@ -43,7 +43,9 @@ const QuantityController = ({
         −
       </button>
 
-      <div className="current-quantity">{quantity}</div>
+      <div className="current-quantity">
+        <h6>{quantity}</h6>
+      </div>
 
       <button
         className="quantity-button"

@@ -129,6 +129,12 @@
       p {
         color: $secondary-color;
         font-weight: 400;
+        margin: 0.25rem 0;
+      }
+      .quantity-controller {
+        contain: content;
+        border-radius: 5px;
+        width: min-content;
       }
     }
   }

@@ -5,8 +5,9 @@ import {
   faXmark,
   faBars,
   faHeart,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function initIcons() {
-  return library.add(faCartShopping, faTrash, faXmark, faBars, faHeart);
+  return library.add(faCartShopping, faTrash, faXmark, faBars, faHeart, faStar);
 }

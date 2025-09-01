@@ -1,0 +1,36 @@
+.quantity-controller {
+  display: flex;
+
+  .current-quantity {
+    width: 1.5rem;
+    border-top: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    background-color: rgba($secondary-color, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h6 {
+      margin: 0;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+  .quantity-button {
+    border: none;
+    background-color: $primary-color;
+    padding: 0.25rem;
+    color: $background-color;
+    transition: all 0.2s;
+    &:disabled {
+      color: $secondary-color;
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+    &:hover {
+      background-color: $secondary-color;
+    }
+    &:active {
+    }
+  }
+}

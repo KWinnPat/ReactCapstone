@@ -1,0 +1,42 @@
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+}
+
+h2 {
+  font-size: 10vw;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  button {
+    background-color: $secondary-color;
+    border-radius: 10vw;
+    color: $background-color;
+    font-family: $font-fam;
+    font-size: 3vw;
+    padding: 1vw 5vw;
+    margin-bottom: 2%;
+    border: 0;
+  }
+  input,
+  textarea {
+    background-color: rgba($secondary-color, 0.3);
+    border: 2px solid $primary-color;
+    font-weight: 900;
+    padding: 5px;
+    border-radius: 10px;
+    width: 96%;
+    margin: 0.25rem;
+  }
+  ::placeholder {
+    color: $primary-color;
+    opacity: 1;
+  }
+}

@@ -63,7 +63,6 @@ function CartModal() {
                   <button
                     onClick={() => {
                       removeFromCart(value.id);
-                      console.log(cart);
                     }}
                   >
                     <FontAwesomeIcon icon={["fas", "trash"]} />

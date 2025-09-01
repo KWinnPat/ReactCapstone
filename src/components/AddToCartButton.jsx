@@ -1,18 +1,24 @@
 import { useCart } from "../helpers/hooks/useCart";
-import CartModal from "./CartModal";
+import { useState } from "react";
+import QuantityController from "./QuantityController";
 
-function AddToCartButton({ product, quantity }) {
+function AddToCartButton({ product }) {
+  const [quantity, setQuantity] = useState(1);
+
   const { addToCart } = useCart();
 
   return (
-    <button
-      onClick={() => {
-        addToCart(product, quantity);
-      }}
-      className="add-to-cart-btn"
-    >
-      Add to Cart
-    </button>
+    <div className="add-to-cart">
+      <button
+        onClick={() => {
+          addToCart(product, quantity);
+        }}
+        className="add-to-cart-btn"
+      >
+        Add to Cart
+      </button>
+      <QuantityController setQuantity={setQuantity} quantity={quantity} />
+    </div>
   );
 }
 

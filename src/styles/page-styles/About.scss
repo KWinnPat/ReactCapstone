@@ -1,0 +1,34 @@
+.abt-content {
+  padding: 0.5rem 5vw;
+
+  & > * {
+    background-color: rgba($secondary-color, 0.5);
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+    h1 {
+      margin: 0;
+    }
+    p {
+      background-color: rgba($background-color, 0.5);
+      border-radius: 20px;
+      padding: 1rem;
+    }
+    h2 {
+      background-color: rgba($secondary-color, 0.5);
+      border-radius: 20px;
+      padding: 1rem;
+      a {
+        color: $primary-color;
+        transition: all 0.2s;
+        &:hover {
+          color: $secondary-color;
+        }
+        &:active {
+          color: rgba($primary-color, 0.5);
+        }
+      }
+    }
+  }
+}

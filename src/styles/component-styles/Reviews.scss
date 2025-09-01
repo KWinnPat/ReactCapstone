@@ -1,0 +1,19 @@
+.review {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  font-size: 3vw;
+  .stars {
+    align-content: center;
+    justify-content: center;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .review {
+    font-size: 6vw;
+  }
+}
